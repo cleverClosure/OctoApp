@@ -9,7 +9,7 @@
 import XCTest
 @testable import OctoApp
 
-class OctoAppTests: XCTestCase {
+class OAuthConfigTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -21,16 +21,26 @@ class OctoAppTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+   
+    
+    func testInit_authPathIsNotNil() {
+        let config = OAuthConfig()
+        XCTAssert(config.authPath != nil)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    func testswapCodeForToken_ShouldReturnNil() {
+        let exp = expectation(description: "Expecting to return nil")
+        let config = OAuthConfig()
+        config.swapCodeForToken(receivedCode: "123") { res in
+            if res != nil {
+                XCTFail()
+            } else {
+                exp.fulfill()
+            }
         }
+        wait(for: [exp], timeout: 5)
     }
+    
+
     
 }

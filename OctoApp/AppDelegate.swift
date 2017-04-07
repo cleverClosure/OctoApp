@@ -12,14 +12,37 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
 
     var window: UIWindow?
-
-
+    var splitViewController: UISplitViewController?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
-        let splitViewController = window!.rootViewController as! UISplitViewController
-        let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
-        navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-        splitViewController.delegate = self
+        if TokenConfig().hasToken {
+            presentMaster(config: TokenConfig())
+        } else {
+            presentLoginVC()
+        }
+        return true
+    }
+    
+    func presentMaster(config: TokenConfig?) {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let splitVC = storyboard.instantiateViewController(withIdentifier: "InitialSplitViewController") as! UISplitViewController
+        let navigationController = splitVC.viewControllers[(splitVC.viewControllers.count)-1] as? UINavigationController
+        navigationController!.topViewController!.navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
+        splitVC.delegate = self
+        window!.rootViewController = splitVC
+    }
+    
+    func presentLoginVC() {
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+        window?.rootViewController = loginVC
+    }
+    
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        OAuthConfig().authenticate(url: url) { tokenConfig in
+            self.presentMaster(config: tokenConfig)
+        }
         return true
     }
 

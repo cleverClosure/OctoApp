@@ -7,13 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E1C776C90F33D630BFFF098 /* Pods_OctoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CB585EB37FD57F37F8D3 /* Pods_OctoApp.framework */; };
+		3956D79C1E97B037001547B4 /* RepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79B1E97B037001547B4 /* RepoRouter.swift */; };
+		3956D79E1E97B06D001547B4 /* Alamofire+JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79D1E97B06D001547B4 /* Alamofire+JSONSerialization.swift */; };
+		3956D7A01E97B095001547B4 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79F1E97B095001547B4 /* Repo.swift */; };
+		3956D7A31E97B517001547B4 /* ResponseCollectionSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D7A21E97B517001547B4 /* ResponseCollectionSerializable.swift */; };
+		3956D7A51E97B56D001547B4 /* ResponseObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D7A41E97B56D001547B4 /* ResponseObjectSerializable.swift */; };
+		3959F8531E96B81300F01758 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959F8521E96B81300F01758 /* LoginViewController.swift */; };
+		3959F8561E96DAD300F01758 /* OAuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959F8551E96DAD300F01758 /* OAuthConfig.swift */; };
+		3959F8581E96DEE300F01758 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3959F8571E96DEE300F01758 /* Alamofire.framework */; };
+		399BA3FB1E96A9DA0072FCBB /* TokenConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399BA3FA1E96A9DA0072FCBB /* TokenConfig.swift */; };
 		39D360C61E9529C90071B687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360C51E9529C90071B687 /* AppDelegate.swift */; };
 		39D360C81E9529C90071B687 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360C71E9529C90071B687 /* MasterViewController.swift */; };
 		39D360CA1E9529C90071B687 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360C91E9529C90071B687 /* DetailViewController.swift */; };
 		39D360CD1E9529C90071B687 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D360CB1E9529C90071B687 /* Main.storyboard */; };
 		39D360CF1E9529C90071B687 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 39D360CE1E9529C90071B687 /* Assets.xcassets */; };
 		39D360D21E9529C90071B687 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 39D360D01E9529C90071B687 /* LaunchScreen.storyboard */; };
-		39D360DD1E9529CA0071B687 /* OctoAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360DC1E9529CA0071B687 /* OctoAppTests.swift */; };
+		39D360DD1E9529CA0071B687 /* OAuthConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360DC1E9529CA0071B687 /* OAuthConfigTest.swift */; };
+		39D360E81E9531F10071B687 /* GithHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360E71E9531F10071B687 /* GithHubAPI.swift */; };
+		39D360EA1E9546820071B687 /* githubapi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39D360E91E9546820071B687 /* githubapi.plist */; };
+		885FB33D13DDE06131A1DBC9 /* Pods_OctoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2487ADB6C74D17D4C98425D9 /* Pods_OctoAppTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +40,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2487ADB6C74D17D4C98425D9 /* Pods_OctoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3956D79A1E97A0DA001547B4 /* OctoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OctoApp.entitlements; sourceTree = "<group>"; };
+		3956D79B1E97B037001547B4 /* RepoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoRouter.swift; sourceTree = "<group>"; };
+		3956D79D1E97B06D001547B4 /* Alamofire+JSONSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+JSONSerialization.swift"; sourceTree = "<group>"; };
+		3956D79F1E97B095001547B4 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		3956D7A21E97B517001547B4 /* ResponseCollectionSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCollectionSerializable.swift; sourceTree = "<group>"; };
+		3956D7A41E97B56D001547B4 /* ResponseObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObjectSerializable.swift; sourceTree = "<group>"; };
+		3959F8521E96B81300F01758 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		3959F8551E96DAD300F01758 /* OAuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthConfig.swift; sourceTree = "<group>"; };
+		3959F8571E96DEE300F01758 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		399BA3FA1E96A9DA0072FCBB /* TokenConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfig.swift; sourceTree = "<group>"; };
 		39D360C21E9529C90071B687 /* OctoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D360C51E9529C90071B687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		39D360C71E9529C90071B687 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
@@ -36,8 +60,15 @@
 		39D360D11E9529C90071B687 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		39D360D31E9529C90071B687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39D360D81E9529CA0071B687 /* OctoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OctoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		39D360DC1E9529CA0071B687 /* OctoAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OctoAppTests.swift; sourceTree = "<group>"; };
+		39D360DC1E9529CA0071B687 /* OAuthConfigTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OAuthConfigTest.swift; sourceTree = "<group>"; };
 		39D360DE1E9529CA0071B687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		39D360E71E9531F10071B687 /* GithHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithHubAPI.swift; sourceTree = "<group>"; };
+		39D360E91E9546820071B687 /* githubapi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = githubapi.plist; sourceTree = "<group>"; };
+		765509AB8613ECFC6B7D2466 /* Pods-OctoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctoApp/Pods-OctoApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7EE9CB585EB37FD57F37F8D3 /* Pods_OctoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83DF6807507185521939E07A /* Pods-OctoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OctoApp/Pods-OctoApp.release.xcconfig"; sourceTree = "<group>"; };
+		9E863421A59CEBFBA6C337F2 /* Pods-OctoAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoAppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-OctoAppTests/Pods-OctoAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		C013CC359BC3829F07A9342E /* Pods-OctoAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoAppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctoAppTests/Pods-OctoAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +76,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3959F8581E96DEE300F01758 /* Alamofire.framework in Frameworks */,
+				2E1C776C90F33D630BFFF098 /* Pods_OctoApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +85,50 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				885FB33D13DDE06131A1DBC9 /* Pods_OctoAppTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		280225783562A10D16EC4446 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				765509AB8613ECFC6B7D2466 /* Pods-OctoApp.debug.xcconfig */,
+				83DF6807507185521939E07A /* Pods-OctoApp.release.xcconfig */,
+				C013CC359BC3829F07A9342E /* Pods-OctoAppTests.debug.xcconfig */,
+				9E863421A59CEBFBA6C337F2 /* Pods-OctoAppTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3956D7A11E97B09A001547B4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3956D79F1E97B095001547B4 /* Repo.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		3959F8541E96B83500F01758 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				39D360C71E9529C90071B687 /* MasterViewController.swift */,
+				39D360C91E9529C90071B687 /* DetailViewController.swift */,
+				3959F8521E96B81300F01758 /* LoginViewController.swift */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
 		39D360B91E9529C90071B687 = {
 			isa = PBXGroup;
 			children = (
 				39D360C41E9529C90071B687 /* OctoApp */,
 				39D360DB1E9529CA0071B687 /* OctoAppTests */,
 				39D360C31E9529C90071B687 /* Products */,
+				280225783562A10D16EC4446 /* Pods */,
+				3D36BBE8DB5853552052CE18 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,13 +144,22 @@
 		39D360C41E9529C90071B687 /* OctoApp */ = {
 			isa = PBXGroup;
 			children = (
+				3956D79A1E97A0DA001547B4 /* OctoApp.entitlements */,
 				39D360C51E9529C90071B687 /* AppDelegate.swift */,
-				39D360C71E9529C90071B687 /* MasterViewController.swift */,
-				39D360C91E9529C90071B687 /* DetailViewController.swift */,
+				3959F8541E96B83500F01758 /* ViewControllers */,
+				39D360E71E9531F10071B687 /* GithHubAPI.swift */,
+				3956D7A11E97B09A001547B4 /* Model */,
+				3959F8551E96DAD300F01758 /* OAuthConfig.swift */,
+				3956D79B1E97B037001547B4 /* RepoRouter.swift */,
+				3956D79D1E97B06D001547B4 /* Alamofire+JSONSerialization.swift */,
+				3956D7A21E97B517001547B4 /* ResponseCollectionSerializable.swift */,
+				3956D7A41E97B56D001547B4 /* ResponseObjectSerializable.swift */,
+				399BA3FA1E96A9DA0072FCBB /* TokenConfig.swift */,
 				39D360CB1E9529C90071B687 /* Main.storyboard */,
 				39D360CE1E9529C90071B687 /* Assets.xcassets */,
 				39D360D01E9529C90071B687 /* LaunchScreen.storyboard */,
 				39D360D31E9529C90071B687 /* Info.plist */,
+				39D360E91E9546820071B687 /* githubapi.plist */,
 			);
 			path = OctoApp;
 			sourceTree = "<group>";
@@ -93,10 +167,20 @@
 		39D360DB1E9529CA0071B687 /* OctoAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				39D360DC1E9529CA0071B687 /* OctoAppTests.swift */,
+				39D360DC1E9529CA0071B687 /* OAuthConfigTest.swift */,
 				39D360DE1E9529CA0071B687 /* Info.plist */,
 			);
 			path = OctoAppTests;
+			sourceTree = "<group>";
+		};
+		3D36BBE8DB5853552052CE18 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3959F8571E96DEE300F01758 /* Alamofire.framework */,
+				7EE9CB585EB37FD57F37F8D3 /* Pods_OctoApp.framework */,
+				2487ADB6C74D17D4C98425D9 /* Pods_OctoAppTests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -106,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39D360E11E9529CA0071B687 /* Build configuration list for PBXNativeTarget "OctoApp" */;
 			buildPhases = (
+				B48F21443FD7B6F08745A82C /* [CP] Check Pods Manifest.lock */,
 				39D360BE1E9529C90071B687 /* Sources */,
 				39D360BF1E9529C90071B687 /* Frameworks */,
 				39D360C01E9529C90071B687 /* Resources */,
+				C0EAEC42FB77F7C6CB3897ED /* [CP] Embed Pods Frameworks */,
+				1C4845B6D1C81C88BF42E1D9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -123,9 +210,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 39D360E41E9529CA0071B687 /* Build configuration list for PBXNativeTarget "OctoAppTests" */;
 			buildPhases = (
+				04F76FE4437ADF0C0D87ED11 /* [CP] Check Pods Manifest.lock */,
 				39D360D41E9529CA0071B687 /* Sources */,
 				39D360D51E9529CA0071B687 /* Frameworks */,
 				39D360D61E9529CA0071B687 /* Resources */,
+				D803A29310BEA16C6A3A35F9 /* [CP] Embed Pods Frameworks */,
+				44D0A75699EC660B0F8C95FD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +241,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = F5PC84GW85;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 					39D360D71E9529CA0071B687 = {
 						CreatedOnToolsVersion = 8.3;
@@ -186,6 +281,7 @@
 			files = (
 				39D360D21E9529C90071B687 /* LaunchScreen.storyboard in Resources */,
 				39D360CF1E9529C90071B687 /* Assets.xcassets in Resources */,
+				39D360EA1E9546820071B687 /* githubapi.plist in Resources */,
 				39D360CD1E9529C90071B687 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,13 +295,115 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		04F76FE4437ADF0C0D87ED11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		1C4845B6D1C81C88BF42E1D9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctoApp/Pods-OctoApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		44D0A75699EC660B0F8C95FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctoAppTests/Pods-OctoAppTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B48F21443FD7B6F08745A82C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C0EAEC42FB77F7C6CB3897ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctoApp/Pods-OctoApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D803A29310BEA16C6A3A35F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-OctoAppTests/Pods-OctoAppTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		39D360BE1E9529C90071B687 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3959F8531E96B81300F01758 /* LoginViewController.swift in Sources */,
+				3959F8561E96DAD300F01758 /* OAuthConfig.swift in Sources */,
+				3956D79C1E97B037001547B4 /* RepoRouter.swift in Sources */,
+				3956D79E1E97B06D001547B4 /* Alamofire+JSONSerialization.swift in Sources */,
+				39D360E81E9531F10071B687 /* GithHubAPI.swift in Sources */,
+				399BA3FB1E96A9DA0072FCBB /* TokenConfig.swift in Sources */,
 				39D360CA1E9529C90071B687 /* DetailViewController.swift in Sources */,
+				3956D7A01E97B095001547B4 /* Repo.swift in Sources */,
+				3956D7A51E97B56D001547B4 /* ResponseObjectSerializable.swift in Sources */,
 				39D360C81E9529C90071B687 /* MasterViewController.swift in Sources */,
+				3956D7A31E97B517001547B4 /* ResponseCollectionSerializable.swift in Sources */,
 				39D360C61E9529C90071B687 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +412,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				39D360DD1E9529CA0071B687 /* OctoAppTests.swift in Sources */,
+				39D360DD1E9529CA0071B687 /* OAuthConfigTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,9 +541,15 @@
 		};
 		39D360E21E9529CA0071B687 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 765509AB8613ECFC6B7D2466 /* Pods-OctoApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OctoApp/OctoApp.entitlements;
 				DEVELOPMENT_TEAM = F5PC84GW85;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = OctoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.cleverClosure.OctoApp;
@@ -356,9 +560,15 @@
 		};
 		39D360E31E9529CA0071B687 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83DF6807507185521939E07A /* Pods-OctoApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = OctoApp/OctoApp.entitlements;
 				DEVELOPMENT_TEAM = F5PC84GW85;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/build/Debug-iphoneos/Alamofire",
+				);
 				INFOPLIST_FILE = OctoApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ru.cleverClosure.OctoApp;
@@ -369,6 +579,7 @@
 		};
 		39D360E51E9529CA0071B687 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C013CC359BC3829F07A9342E /* Pods-OctoAppTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -384,6 +595,7 @@
 		};
 		39D360E61E9529CA0071B687 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E863421A59CEBFBA6C337F2 /* Pods-OctoAppTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -416,6 +628,7 @@
 				39D360E31E9529CA0071B687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		39D360E41E9529CA0071B687 /* Build configuration list for PBXNativeTarget "OctoAppTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +637,7 @@
 				39D360E61E9529CA0071B687 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

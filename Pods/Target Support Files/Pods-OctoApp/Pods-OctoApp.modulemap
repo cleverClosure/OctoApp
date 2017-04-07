@@ -1,0 +1,6 @@
+framework module Pods_OctoApp {
+  umbrella header "Pods-OctoApp-umbrella.h"
+
+  export *
+  module * { export * }
+}

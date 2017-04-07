@@ -1,0 +1,15 @@
+PODS:
+  - Alamofire (4.4.0)
+  - Locksmith (3.0.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - Locksmith
+
+SPEC CHECKSUMS:
+  Alamofire: dc44b1600b800eb63da6a19039a0083d62a6a62d
+  Locksmith: 310b4cc5031af5728bf4db5d4de547a5100c6a3b
+
+PODFILE CHECKSUM: 78ad5306636c0f47f77be3af89cae9ac6674b37c
+
+COCOAPODS: 1.2.0
