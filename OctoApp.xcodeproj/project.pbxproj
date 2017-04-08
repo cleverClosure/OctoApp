@@ -13,6 +13,7 @@
 		3956D7A01E97B095001547B4 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79F1E97B095001547B4 /* Repo.swift */; };
 		3956D7A31E97B517001547B4 /* ResponseCollectionSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D7A21E97B517001547B4 /* ResponseCollectionSerializable.swift */; };
 		3956D7A51E97B56D001547B4 /* ResponseObjectSerializable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D7A41E97B56D001547B4 /* ResponseObjectSerializable.swift */; };
+		3956D7A71E990098001547B4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D7A61E990098001547B4 /* TabBarController.swift */; };
 		3959F8531E96B81300F01758 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959F8521E96B81300F01758 /* LoginViewController.swift */; };
 		3959F8561E96DAD300F01758 /* OAuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959F8551E96DAD300F01758 /* OAuthConfig.swift */; };
 		3959F8581E96DEE300F01758 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3959F8571E96DEE300F01758 /* Alamofire.framework */; };
@@ -47,6 +48,7 @@
 		3956D79F1E97B095001547B4 /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		3956D7A21E97B517001547B4 /* ResponseCollectionSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseCollectionSerializable.swift; sourceTree = "<group>"; };
 		3956D7A41E97B56D001547B4 /* ResponseObjectSerializable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseObjectSerializable.swift; sourceTree = "<group>"; };
+		3956D7A61E990098001547B4 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3959F8521E96B81300F01758 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3959F8551E96DAD300F01758 /* OAuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthConfig.swift; sourceTree = "<group>"; };
 		3959F8571E96DEE300F01758 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				39D360C71E9529C90071B687 /* MasterViewController.swift */,
 				39D360C91E9529C90071B687 /* DetailViewController.swift */,
 				3959F8521E96B81300F01758 /* LoginViewController.swift */,
+				3956D7A61E990098001547B4 /* TabBarController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3959F8531E96B81300F01758 /* LoginViewController.swift in Sources */,
+				3956D7A71E990098001547B4 /* TabBarController.swift in Sources */,
 				3959F8561E96DAD300F01758 /* OAuthConfig.swift in Sources */,
 				3956D79C1E97B037001547B4 /* RepoRouter.swift in Sources */,
 				3956D79E1E97B06D001547B4 /* Alamofire+JSONSerialization.swift in Sources */,

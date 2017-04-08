@@ -9,27 +9,25 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var splitViewController: UISplitViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        TokenConfig().setOAuthToken(token: nil)
         if TokenConfig().hasToken {
-            presentMaster(config: TokenConfig())
+            presentMain(config: TokenConfig())
         } else {
             presentLoginVC()
         }
         return true
     }
     
-    func presentMaster(config: TokenConfig?) {
+    func presentMain(config: TokenConfig?) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let splitVC = storyboard.instantiateViewController(withIdentifier: "InitialSplitViewController") as! UISplitViewController
-        let navigationController = splitVC.viewControllers[(splitVC.viewControllers.count)-1] as? UINavigationController
-        navigationController!.topViewController!.navigationItem.leftBarButtonItem = splitVC.displayModeButtonItem
-        splitVC.delegate = self
-        window!.rootViewController = splitVC
+        let tabVC = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
+        window!.rootViewController = tabVC
     }
     
     func presentLoginVC() {
@@ -41,7 +39,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
         OAuthConfig().authenticate(url: url) { tokenConfig in
-            self.presentMaster(config: tokenConfig)
+            self.presentMain(config: tokenConfig)
         }
         return true
     }
@@ -68,17 +66,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-    // MARK: - Split view
+    
 
-    func splitViewController(_ splitViewController: UISplitViewController, collapseSecondary secondaryViewController:UIViewController, onto primaryViewController:UIViewController) -> Bool {
-        guard let secondaryAsNavController = secondaryViewController as? UINavigationController else { return false }
-        guard let topAsDetailController = secondaryAsNavController.topViewController as? DetailViewController else { return false }
-        if topAsDetailController.detailItem == nil {
-            // Return true to indicate that we have handled the collapse by doing nothing; the secondary controller will be discarded.
-            return true
-        }
-        return false
-    }
+
 
 }
 

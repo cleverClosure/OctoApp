@@ -22,7 +22,8 @@ class GitHubAPI {
     
     func get() {
         Alamofire.request("https://api.github.com/repositories", method: .get).responseJSON { response in
-            print(response)
+            let res = response.value as! [[String: Any]]
+            print(res[0])
         }
     }
     

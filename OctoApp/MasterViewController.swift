@@ -13,7 +13,8 @@ class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
     var objects = [Any]()
-
+    
+    let gitHubAPI = GitHubAPI(config: TokenConfig())
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,9 @@ class MasterViewController: UITableViewController {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
         
-        let res = GitHubAPI().get()
-        print(res)
+        gitHubAPI.get()
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
