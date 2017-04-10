@@ -15,8 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var splitViewController: UISplitViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        TokenConfig().setOAuthToken(token: nil)
-        if TokenConfig().hasToken {
+//        TokenConfig().OAuthToken = nil
+        if TokenConfig().OAuthToken != nil {
             presentMain(config: TokenConfig())
         } else {
             presentLoginVC()

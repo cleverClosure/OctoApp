@@ -38,20 +38,13 @@ class TokenConfig {
         }
     }
     
-    var hasToken: Bool {
-        return OAuthToken != nil
-    }
-    
     init(token: String) {
-        setOAuthToken(token: token)
+        OAuthToken = token
     }
     
     init() {
         
     }
-    
-    func setOAuthToken(token: String?) {
-        self.OAuthToken = token
-    }
+
 
 }

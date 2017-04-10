@@ -20,13 +20,19 @@ class GitHubAPI {
     
     init(){}
     
-    func get() {
-        Alamofire.request("https://api.github.com/repositories", method: .get).responseJSON { response in
-            let res = response.value as! [[String: Any]]
-            print(res[0])
-        }
+    func fetchMyRepos(completionHandler: @escaping ([Repo]?) -> Void) {
+        fetchRepos(repoRouter: .getMyOwn(), completionHandler: completionHandler)
     }
     
+    func fetchRepos(repoRouter: RepoRouter,  completionHandler: @escaping ([Repo]?) -> Void) {
+        Alamofire.request(repoRouter).responseCollection { (response: DataResponse<[Repo]>) in
+            if let repos = response.value {
+                completionHandler(repos)
+            } else {
+                completionHandler(nil)
+            }
+        }
+    }
     
 }
 
