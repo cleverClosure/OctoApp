@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E1C776C90F33D630BFFF098 /* Pods_OctoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CB585EB37FD57F37F8D3 /* Pods_OctoApp.framework */; };
+		391112E71E9BCA86002283E0 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391112E61E9BCA86002283E0 /* RepoCell.swift */; };
 		3956D79C1E97B037001547B4 /* RepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79B1E97B037001547B4 /* RepoRouter.swift */; };
 		3956D79E1E97B06D001547B4 /* Alamofire+JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79D1E97B06D001547B4 /* Alamofire+JSONSerialization.swift */; };
 		3956D7A01E97B095001547B4 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79F1E97B095001547B4 /* Repo.swift */; };
@@ -30,6 +31,7 @@
 		39D360DD1E9529CA0071B687 /* OAuthConfigTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360DC1E9529CA0071B687 /* OAuthConfigTest.swift */; };
 		39D360E81E9531F10071B687 /* GithHubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360E71E9531F10071B687 /* GithHubAPI.swift */; };
 		39D360EA1E9546820071B687 /* githubapi.plist in Resources */ = {isa = PBXBuildFile; fileRef = 39D360E91E9546820071B687 /* githubapi.plist */; };
+		39D600021E9C1B83008FB503 /* gitlogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 39D600011E9C1B83008FB503 /* gitlogo.png */; };
 		885FB33D13DDE06131A1DBC9 /* Pods_OctoAppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2487ADB6C74D17D4C98425D9 /* Pods_OctoAppTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,7 @@
 
 /* Begin PBXFileReference section */
 		2487ADB6C74D17D4C98425D9 /* Pods_OctoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		391112E61E9BCA86002283E0 /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 		3956D79A1E97A0DA001547B4 /* OctoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OctoApp.entitlements; sourceTree = "<group>"; };
 		3956D79B1E97B037001547B4 /* RepoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoRouter.swift; sourceTree = "<group>"; };
 		3956D79D1E97B06D001547B4 /* Alamofire+JSONSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+JSONSerialization.swift"; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 		39D360DE1E9529CA0071B687 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		39D360E71E9531F10071B687 /* GithHubAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GithHubAPI.swift; sourceTree = "<group>"; };
 		39D360E91E9546820071B687 /* githubapi.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = githubapi.plist; sourceTree = "<group>"; };
+		39D600011E9C1B83008FB503 /* gitlogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gitlogo.png; sourceTree = "<group>"; };
 		765509AB8613ECFC6B7D2466 /* Pods-OctoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OctoApp/Pods-OctoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		7EE9CB585EB37FD57F37F8D3 /* Pods_OctoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83DF6807507185521939E07A /* Pods-OctoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OctoApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-OctoApp/Pods-OctoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -109,6 +113,14 @@
 				9E863421A59CEBFBA6C337F2 /* Pods-OctoAppTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		391112E81E9BCA8B002283E0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				391112E61E9BCA86002283E0 /* RepoCell.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		3956D7A11E97B09A001547B4 /* Model */ = {
@@ -172,6 +184,8 @@
 			children = (
 				3956D79A1E97A0DA001547B4 /* OctoApp.entitlements */,
 				39D360C51E9529C90071B687 /* AppDelegate.swift */,
+				39D600031E9C1B88008FB503 /* Img */,
+				391112E81E9BCA8B002283E0 /* View */,
 				3959F8541E96B83500F01758 /* ViewController */,
 				3956D7A11E97B09A001547B4 /* Model */,
 				3956D7AA1E991260001547B4 /* Networking */,
@@ -191,6 +205,14 @@
 				39D360DE1E9529CA0071B687 /* Info.plist */,
 			);
 			path = OctoAppTests;
+			sourceTree = "<group>";
+		};
+		39D600031E9C1B88008FB503 /* Img */ = {
+			isa = PBXGroup;
+			children = (
+				39D600011E9C1B83008FB503 /* gitlogo.png */,
+			);
+			name = Img;
 			sourceTree = "<group>";
 		};
 		3D36BBE8DB5853552052CE18 /* Frameworks */ = {
@@ -299,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39D600021E9C1B83008FB503 /* gitlogo.png in Resources */,
 				39D360D21E9529C90071B687 /* LaunchScreen.storyboard in Resources */,
 				39D360CF1E9529C90071B687 /* Assets.xcassets in Resources */,
 				39D360EA1E9546820071B687 /* githubapi.plist in Resources */,
@@ -420,6 +443,7 @@
 				3956D79C1E97B037001547B4 /* RepoRouter.swift in Sources */,
 				3956D7B01E99155F001547B4 /* Repo+Networking.swift in Sources */,
 				3956D79E1E97B06D001547B4 /* Alamofire+JSONSerialization.swift in Sources */,
+				391112E71E9BCA86002283E0 /* RepoCell.swift in Sources */,
 				39D360E81E9531F10071B687 /* GithHubAPI.swift in Sources */,
 				3956D7A91E990C5A001547B4 /* User.swift in Sources */,
 				399BA3FB1E96A9DA0072FCBB /* TokenConfig.swift in Sources */,

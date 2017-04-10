@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 
 class MasterViewController: UITableViewController {
@@ -67,12 +68,16 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RepoCell
 
         let object = objects[indexPath.row]
         
-        cell.textLabel!.text = object.name
-        cell.detailTextLabel?.text = object.description
+        cell.title.text = object.name
+        cell.subtitle.text = object.descr
+        if let owner = object.owner {
+            cell.avatarView.kf.setImage(with: URL(string: owner.avatarURL))
+        }
+        
         return cell
     }
 

@@ -7,7 +7,8 @@ target 'OctoApp' do
 
   # Pods for OctoApp
   pod 'Alamofire', '~> 4.4'
-  pod 'Locksmith'	  
+  pod 'Locksmith'
+  pod 'Kingfisher', '~> 3.0'
   target 'OctoAppTests' do
     inherit! :search_paths
     # Pods for testing
