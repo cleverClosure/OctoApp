@@ -15,14 +15,13 @@ enum RepoRouter: URLRequestConvertible {
     
     case getPublic()
     case getMyOwn()
+    case getDetails(Repo)
     
     
     func asURLRequest() throws -> URLRequest {
         var method: HTTPMethod {
             switch self {
-            case .getPublic:
-                return .get
-            case .getMyOwn:
+            case .getPublic, .getMyOwn, .getDetails:
                 return .get
             }
         }
@@ -34,6 +33,8 @@ enum RepoRouter: URLRequestConvertible {
                 relativePath = "/repositories"
             case .getMyOwn:
                 relativePath = "/user/repos"
+            case .getDetails(let repo):
+                relativePath = "/repos/\(repo.owner.login)/\(repo.name)"
 
             }
             
@@ -44,7 +45,7 @@ enum RepoRouter: URLRequestConvertible {
         
         let params: ([String: Any]?) = {
             switch self {
-            case .getPublic, .getMyOwn:
+            case .getPublic, .getMyOwn, .getDetails:
                 return nil
             }
         }()

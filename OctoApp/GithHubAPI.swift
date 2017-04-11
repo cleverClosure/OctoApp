@@ -34,5 +34,15 @@ class GitHubAPI {
         }
     }
     
+    func fetchRepoDetails(repo: Repo, complitionHandler: @escaping (Repo?) -> Void) {
+        Alamofire.request(RepoRouter.getDetails(repo)).responseObject { (response: DataResponse<Repo>) in
+            if let repo = response.value {
+                complitionHandler(repo)
+            } else {
+                complitionHandler(nil)
+            }
+        }
+    }
+    
 }
 

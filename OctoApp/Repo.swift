@@ -12,17 +12,20 @@ import Foundation
 final class Repo: CustomStringConvertible, ResponseObjectSerializable, ResponseCollectionSerializable {
     let name: String
     let descr: String
-    
-    let owner: User?
+    let owner: User
+    var forksCount: Int?
+    var watchersCount: Int?
     
     var description: String {
         return "\(name)"
     }
     
-    init(name: String, descr: String, owner: User) {
+    init(name: String, descr: String, owner: User, forksCount: Int? = nil, watchersCount: Int? = nil) {
         self.name = name
         self.descr = descr
         self.owner = owner
+        self.forksCount = forksCount
+        self.watchersCount = watchersCount
     }
     
     convenience required init?(json: [String: Any]) {
@@ -31,7 +34,10 @@ final class Repo: CustomStringConvertible, ResponseObjectSerializable, ResponseC
                 return nil
         }
         let owner = User(json: ownerJSON)
-        self.init(name: name, descr: descr, owner: owner!)
+        let forks = json["forks_count"] as? Int
+        let watchers = json["watchers_count"] as? Int
+        
+        self.init(name: name, descr: descr, owner: owner!, forksCount: forks, watchersCount: watchers)
     }
     
     convenience required init?(response: HTTPURLResponse, representation: Any) {
@@ -40,10 +46,15 @@ final class Repo: CustomStringConvertible, ResponseObjectSerializable, ResponseC
             let name = representation["name"] as? String, let descr = representation["description"] as? String, let ownerRep = representation["owner"]
             else {
                 return nil
+                
         }
         
-        let owner = User(response: response, representation: ownerRep) 
-        self.init(name: name, descr: descr, owner: owner!)
+        let owner = User(response: response, representation: ownerRep)
+        
+        let forks = representation["forks_count"] as? Int
+        let watchers = representation["watchers_count"] as? Int
+        
+        self.init(name: name, descr: descr, owner: owner!, forksCount: forks, watchersCount: watchers)
     }
     
     class func collection(response: HTTPURLResponse, representation: AnyObject) -> [Repo] {

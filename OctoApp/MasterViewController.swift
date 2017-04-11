@@ -48,9 +48,9 @@ class MasterViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
-//                let object = objects[indexPath.row] as! NSDate
-//                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-//                controller.detailItem = object
+                let object = objects[indexPath.row] as! Repo
+                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+                controller.repository = object
 //                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
 //                controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -74,9 +74,8 @@ class MasterViewController: UITableViewController {
         
         cell.title.text = object.name
         cell.subtitle.text = object.descr
-        if let owner = object.owner {
-            cell.avatarView.kf.setImage(with: URL(string: owner.avatarURL))
-        }
+        cell.avatarView.kf.setImage(with: URL(string: object.owner.avatarURL))
+        
         
         return cell
     }

@@ -10,22 +10,37 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet weak var avatarView: UIImageView!
+    
+    @IBOutlet weak var forksCountLabel: UILabel!
+    @IBOutlet weak var watchersCountLabel: UILabel!
+    
+    var repository: Repo?
+    
 
     func configureView() {
         // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
+        if let repository = repository {
+            avatarView.kf.setImage(with: URL(string:repository.owner.avatarURL))
+            if let forksCount = repository.forksCount {
+                forksCountLabel.text = "\(forksCount)"
+            }
+            if let watchersCount = repository.watchersCount {
+                forksCountLabel.text = "\(watchersCount)"
             }
         }
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        configureView()
+        GitHubAPI().fetchRepoDetails(repo: repository!) { fullRepo in
+            self.repository = fullRepo
+            self.configureView()
+        }
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
