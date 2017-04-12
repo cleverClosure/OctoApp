@@ -19,21 +19,38 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        loadRepos()
+    }
+    
+    func loadRepos() {
         GitHubAPI().fetchMyRepos { repos in
+            
+            if self.refreshControl != nil && self.refreshControl!.isRefreshing {
+                self.refreshControl?.endRefreshing()
+            }
             
             if let repos = repos {
                 self.objects = repos
                 self.tableView.reloadData()
+                
             }
         }
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
+        
+        if self.refreshControl == nil {
+            self.refreshControl = UIRefreshControl()
+            self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
+            self.refreshControl?.addTarget(self, action: #selector(MasterViewController.refresh), for: .valueChanged)
+        }
 
+    }
+    
+    func refresh() {
+        loadRepos()
     }
 
     override func didReceiveMemoryWarning() {
