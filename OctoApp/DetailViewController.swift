@@ -20,17 +20,23 @@ class DetailViewController: UIViewController {
 
     func configureView() {
         // Update the user interface for the detail item.
+        
         if let repository = repository {
             avatarView.kf.setImage(with: URL(string:repository.owner.avatarURL))
             if let forksCount = repository.forksCount {
+                
                 forksCountLabel.text = "\(forksCount)"
             }
+            
             if let watchersCount = repository.watchersCount {
-                forksCountLabel.text = "\(watchersCount)"
+                
+                watchersCountLabel.text = "\(watchersCount)"
             }
         }
         
     }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

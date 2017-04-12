@@ -26,6 +26,7 @@ final class Repo: CustomStringConvertible, ResponseObjectSerializable, ResponseC
         self.owner = owner
         self.forksCount = forksCount
         self.watchersCount = watchersCount
+
     }
     
     convenience required init?(json: [String: Any]) {

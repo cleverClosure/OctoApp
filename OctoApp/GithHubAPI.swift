@@ -43,6 +43,18 @@ class GitHubAPI {
             }
         }
     }
+}
+
+extension GitHubAPI {
     
+    func fetchMyself(completionHandler: @escaping (User?) -> Void) {
+        Alamofire.request(RepoRouter.getMyself()).responseObject { (response: DataResponse<User>) in
+            if let me = response.value {
+                completionHandler(me)
+            } else {
+                completionHandler(nil)
+            }
+        }
+    }
 }
 

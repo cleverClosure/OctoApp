@@ -20,6 +20,7 @@
 		3959F8531E96B81300F01758 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959F8521E96B81300F01758 /* LoginViewController.swift */; };
 		3959F8561E96DAD300F01758 /* OAuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959F8551E96DAD300F01758 /* OAuthConfig.swift */; };
 		3959F8581E96DEE300F01758 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3959F8571E96DEE300F01758 /* Alamofire.framework */; };
+		3967217B1E9D4F5300674CB0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967217A1E9D4F5300674CB0 /* ProfileViewController.swift */; };
 		397C236C1E99788E00A7C523 /* User+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C236B1E99788E00A7C523 /* User+Networking.swift */; };
 		399BA3FB1E96A9DA0072FCBB /* TokenConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399BA3FA1E96A9DA0072FCBB /* TokenConfig.swift */; };
 		39D360C61E9529C90071B687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360C51E9529C90071B687 /* AppDelegate.swift */; };
@@ -60,6 +61,7 @@
 		3959F8521E96B81300F01758 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3959F8551E96DAD300F01758 /* OAuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthConfig.swift; sourceTree = "<group>"; };
 		3959F8571E96DEE300F01758 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		3967217A1E9D4F5300674CB0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		397C236B1E99788E00A7C523 /* User+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Networking.swift"; sourceTree = "<group>"; };
 		399BA3FA1E96A9DA0072FCBB /* TokenConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfig.swift; sourceTree = "<group>"; };
 		39D360C21E9529C90071B687 /* OctoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				39D360C71E9529C90071B687 /* MasterViewController.swift */,
+				3967217A1E9D4F5300674CB0 /* ProfileViewController.swift */,
 				39D360C91E9529C90071B687 /* DetailViewController.swift */,
 				3959F8521E96B81300F01758 /* LoginViewController.swift */,
 				3956D7A61E990098001547B4 /* TabBarController.swift */,
@@ -442,6 +445,7 @@
 				3959F8561E96DAD300F01758 /* OAuthConfig.swift in Sources */,
 				3956D79C1E97B037001547B4 /* RepoRouter.swift in Sources */,
 				3956D7B01E99155F001547B4 /* Repo+Networking.swift in Sources */,
+				3967217B1E9D4F5300674CB0 /* ProfileViewController.swift in Sources */,
 				3956D79E1E97B06D001547B4 /* Alamofire+JSONSerialization.swift in Sources */,
 				391112E71E9BCA86002283E0 /* RepoCell.swift in Sources */,
 				39D360E81E9531F10071B687 /* GithHubAPI.swift in Sources */,
