@@ -20,6 +20,8 @@
 		3959F8531E96B81300F01758 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959F8521E96B81300F01758 /* LoginViewController.swift */; };
 		3959F8561E96DAD300F01758 /* OAuthConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3959F8551E96DAD300F01758 /* OAuthConfig.swift */; };
 		3959F8581E96DEE300F01758 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3959F8571E96DEE300F01758 /* Alamofire.framework */; };
+		395A591E1E9E9B9100A1280F /* folder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 395A591C1E9E9B9100A1280F /* folder@2x.png */; };
+		395A591F1E9E9B9100A1280F /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 395A591D1E9E9B9100A1280F /* profile@2x.png */; };
 		3967217B1E9D4F5300674CB0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967217A1E9D4F5300674CB0 /* ProfileViewController.swift */; };
 		397C236C1E99788E00A7C523 /* User+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C236B1E99788E00A7C523 /* User+Networking.swift */; };
 		399BA3FB1E96A9DA0072FCBB /* TokenConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399BA3FA1E96A9DA0072FCBB /* TokenConfig.swift */; };
@@ -61,6 +63,8 @@
 		3959F8521E96B81300F01758 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		3959F8551E96DAD300F01758 /* OAuthConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAuthConfig.swift; sourceTree = "<group>"; };
 		3959F8571E96DEE300F01758 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = "Pods/../build/Debug-iphoneos/Alamofire/Alamofire.framework"; sourceTree = "<group>"; };
+		395A591C1E9E9B9100A1280F /* folder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "folder@2x.png"; path = "Images/folder@2x.png"; sourceTree = "<group>"; };
+		395A591D1E9E9B9100A1280F /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "Images/profile@2x.png"; sourceTree = "<group>"; };
 		3967217A1E9D4F5300674CB0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		397C236B1E99788E00A7C523 /* User+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Networking.swift"; sourceTree = "<group>"; };
 		399BA3FA1E96A9DA0072FCBB /* TokenConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfig.swift; sourceTree = "<group>"; };
@@ -214,6 +218,8 @@
 			isa = PBXGroup;
 			children = (
 				39D600011E9C1B83008FB503 /* gitlogo.png */,
+				395A591C1E9E9B9100A1280F /* folder@2x.png */,
+				395A591D1E9E9B9100A1280F /* profile@2x.png */,
 			);
 			name = Img;
 			sourceTree = "<group>";
@@ -324,7 +330,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				395A591E1E9E9B9100A1280F /* folder@2x.png in Resources */,
 				39D600021E9C1B83008FB503 /* gitlogo.png in Resources */,
+				395A591F1E9E9B9100A1280F /* profile@2x.png in Resources */,
 				39D360D21E9529C90071B687 /* LaunchScreen.storyboard in Resources */,
 				39D360CF1E9529C90071B687 /* Assets.xcassets in Resources */,
 				39D360EA1E9546820071B687 /* githubapi.plist in Resources */,

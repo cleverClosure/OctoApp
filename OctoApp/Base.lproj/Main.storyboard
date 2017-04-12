@@ -213,7 +213,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="h5Z-Bi-0T1" secondAttribute="trailing" id="ezY-jf-9NW"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="KLE-Gm-OCZ"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="profile.png" id="KLE-Gm-OCZ"/>
                     <connections>
                         <outlet property="avatarView" destination="FoE-dU-R8B" id="BdJ-wn-AnV"/>
                         <outlet property="bio" destination="2ha-gM-yHa" id="9U1-oW-qhy"/>
@@ -288,7 +288,7 @@
         <scene sceneID="Nki-YV-4Qg">
             <objects>
                 <splitViewController restorationIdentifier="FirstSplitViewController" storyboardIdentifier="InitialSplitViewController" id="H1p-Uh-vWS" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="My repositories" id="9Uo-JJ-3qm"/>
+                    <tabBarItem key="tabBarItem" title="My repositories" image="folder.png" id="9Uo-JJ-3qm"/>
                     <toolbarItems/>
                     <connections>
                         <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
@@ -405,7 +405,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="folder.png" width="30" height="30"/>
         <image name="gitlogo.png" width="560" height="560"/>
+        <image name="profile.png" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Tll-UG-LXB"/>
