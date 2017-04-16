@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2E1C776C90F33D630BFFF098 /* Pods_OctoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EE9CB585EB37FD57F37F8D3 /* Pods_OctoApp.framework */; };
 		391112E71E9BCA86002283E0 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 391112E61E9BCA86002283E0 /* RepoCell.swift */; };
+		393256341EA178780064662A /* NavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 393256331EA178780064662A /* NavViewController.swift */; };
 		3956D79C1E97B037001547B4 /* RepoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79B1E97B037001547B4 /* RepoRouter.swift */; };
 		3956D79E1E97B06D001547B4 /* Alamofire+JSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79D1E97B06D001547B4 /* Alamofire+JSONSerialization.swift */; };
 		3956D7A01E97B095001547B4 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956D79F1E97B095001547B4 /* Repo.swift */; };
@@ -24,6 +25,7 @@
 		395A591F1E9E9B9100A1280F /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 395A591D1E9E9B9100A1280F /* profile@2x.png */; };
 		3967217B1E9D4F5300674CB0 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3967217A1E9D4F5300674CB0 /* ProfileViewController.swift */; };
 		397C236C1E99788E00A7C523 /* User+Networking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 397C236B1E99788E00A7C523 /* User+Networking.swift */; };
+		3986F1361EA156160011F3E4 /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3986F1351EA156160011F3E4 /* UIColor.swift */; };
 		399BA3FB1E96A9DA0072FCBB /* TokenConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 399BA3FA1E96A9DA0072FCBB /* TokenConfig.swift */; };
 		39D360C61E9529C90071B687 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360C51E9529C90071B687 /* AppDelegate.swift */; };
 		39D360C81E9529C90071B687 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39D360C71E9529C90071B687 /* MasterViewController.swift */; };
@@ -51,6 +53,7 @@
 /* Begin PBXFileReference section */
 		2487ADB6C74D17D4C98425D9 /* Pods_OctoAppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OctoAppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		391112E61E9BCA86002283E0 /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
+		393256331EA178780064662A /* NavViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavViewController.swift; sourceTree = "<group>"; };
 		3956D79A1E97A0DA001547B4 /* OctoApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OctoApp.entitlements; sourceTree = "<group>"; };
 		3956D79B1E97B037001547B4 /* RepoRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoRouter.swift; sourceTree = "<group>"; };
 		3956D79D1E97B06D001547B4 /* Alamofire+JSONSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Alamofire+JSONSerialization.swift"; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 		395A591D1E9E9B9100A1280F /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "profile@2x.png"; path = "Images/profile@2x.png"; sourceTree = "<group>"; };
 		3967217A1E9D4F5300674CB0 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		397C236B1E99788E00A7C523 /* User+Networking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "User+Networking.swift"; sourceTree = "<group>"; };
+		3986F1351EA156160011F3E4 /* UIColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		399BA3FA1E96A9DA0072FCBB /* TokenConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TokenConfig.swift; sourceTree = "<group>"; };
 		39D360C21E9529C90071B687 /* OctoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OctoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		39D360C51E9529C90071B687 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -158,6 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				39D360C71E9529C90071B687 /* MasterViewController.swift */,
+				393256331EA178780064662A /* NavViewController.swift */,
 				3967217A1E9D4F5300674CB0 /* ProfileViewController.swift */,
 				39D360C91E9529C90071B687 /* DetailViewController.swift */,
 				3959F8521E96B81300F01758 /* LoginViewController.swift */,
@@ -191,7 +196,6 @@
 			children = (
 				3956D79A1E97A0DA001547B4 /* OctoApp.entitlements */,
 				39D360C51E9529C90071B687 /* AppDelegate.swift */,
-				39D600031E9C1B88008FB503 /* Img */,
 				391112E81E9BCA8B002283E0 /* View */,
 				3959F8541E96B83500F01758 /* ViewController */,
 				3956D7A11E97B09A001547B4 /* Model */,
@@ -199,8 +203,10 @@
 				39D360CB1E9529C90071B687 /* Main.storyboard */,
 				39D360CE1E9529C90071B687 /* Assets.xcassets */,
 				39D360D01E9529C90071B687 /* LaunchScreen.storyboard */,
+				3986F1351EA156160011F3E4 /* UIColor.swift */,
 				39D360D31E9529C90071B687 /* Info.plist */,
 				39D360E91E9546820071B687 /* githubapi.plist */,
+				39D600031E9C1B88008FB503 /* Img */,
 			);
 			path = OctoApp;
 			sourceTree = "<group>";
@@ -453,8 +459,10 @@
 				3959F8561E96DAD300F01758 /* OAuthConfig.swift in Sources */,
 				3956D79C1E97B037001547B4 /* RepoRouter.swift in Sources */,
 				3956D7B01E99155F001547B4 /* Repo+Networking.swift in Sources */,
+				393256341EA178780064662A /* NavViewController.swift in Sources */,
 				3967217B1E9D4F5300674CB0 /* ProfileViewController.swift in Sources */,
 				3956D79E1E97B06D001547B4 /* Alamofire+JSONSerialization.swift in Sources */,
+				3986F1361EA156160011F3E4 /* UIColor.swift in Sources */,
 				391112E71E9BCA86002283E0 /* RepoCell.swift in Sources */,
 				39D360E81E9531F10071B687 /* GithHubAPI.swift in Sources */,
 				3956D7A91E990C5A001547B4 /* User.swift in Sources */,

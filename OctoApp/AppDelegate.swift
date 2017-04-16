@@ -15,18 +15,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var splitViewController: UISplitViewController?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        
 //        TokenConfig().OAuthToken = nil
         if TokenConfig().OAuthToken != nil {
             presentMain(config: TokenConfig())
         } else {
             presentLoginVC()
         }
+        let barColor = UIColor(netHex: 0x1B0040)
+        let textColor = UIColor(netHex: 0xEAD9FF)
+        setNavBarAppearance(primary: barColor, secondary: textColor)
+        setTabBarAppearance(color: barColor)
         return true
     }
     
     func presentMain(config: TokenConfig?) {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         let tabVC = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
+        
         window!.rootViewController = tabVC
     }
     
@@ -35,6 +41,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         window?.rootViewController = loginVC
     }
+    
+    func setNavBarAppearance(primary: UIColor, secondary: UIColor) {
+        let navigationBarAppearance = UINavigationBar.appearance()
+        
+        navigationBarAppearance.tintColor = secondary
+        navigationBarAppearance.barTintColor = primary
+
+        navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName: secondary]
+    }
+    
+    func setTabBarAppearance(color: UIColor) {
+        let tabBarAppearance = UITabBar.appearance()
+        tabBarAppearance.tintColor = color
+    }
+    
     
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {

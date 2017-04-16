@@ -20,6 +20,7 @@ class MasterViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loadRepos()
+
     }
     
     func loadRepos() {
@@ -32,12 +33,13 @@ class MasterViewController: UITableViewController {
             if let repos = repos {
                 self.objects = repos
                 self.tableView.reloadData()
-                
             }
         }
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        UIApplication.shared.statusBarStyle = .lightContent
+        
         clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
         
@@ -46,7 +48,13 @@ class MasterViewController: UITableViewController {
             self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
             self.refreshControl?.addTarget(self, action: #selector(MasterViewController.refresh), for: .valueChanged)
         }
+        
 
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.statusBarStyle = .default
     }
     
     func refresh() {
@@ -93,7 +101,6 @@ class MasterViewController: UITableViewController {
         cell.subtitle.text = object.descr
         cell.avatarView.kf.setImage(with: URL(string: object.owner.avatarURL))
         
-        
         return cell
     }
 
@@ -110,6 +117,7 @@ class MasterViewController: UITableViewController {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
         }
     }
+    
 
 
 }
