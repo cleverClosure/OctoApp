@@ -51,7 +51,7 @@ class AppCoordinator {
     
     func returnFromSafari(with url: URL) {
         OAuthConfig().authenticate(url: url) { tokenConfig in
-            print("#### open url")
+            
             // self.presentMain(config: tokenConfig)
             self.startMain(config: tokenConfig!)
         }
