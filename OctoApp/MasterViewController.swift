@@ -10,46 +10,47 @@ import UIKit
 import Kingfisher
 
 
+protocol MasterViewControllerDelegate: class {
+    func didSelect(repo: Repo)
+}
+
+
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
-    var objects = [Repo]()
     
-    let gitHubAPI = GitHubAPI(config: TokenConfig())
+    var delegate: MasterViewControllerDelegate?
+    var dataSource: RepoListDataSource?
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadRepos()
+        
+        self.tableView.dataSource = dataSource
+        refresh()
 
     }
     
-    func loadRepos() {
-        GitHubAPI().fetchMyRepos { repos in
-            
-            if self.refreshControl != nil && self.refreshControl!.isRefreshing {
-                self.refreshControl?.endRefreshing()
-            }
-            
-            if let repos = repos {
-                self.objects = repos
-                self.tableView.reloadData()
-            }
-        }
-    }
+    
 
     override func viewWillAppear(_ animated: Bool) {
-        UIApplication.shared.statusBarStyle = .lightContent
-        
-        clearsSelectionOnViewWillAppear = splitViewController!.isCollapsed
         super.viewWillAppear(animated)
+        UIApplication.shared.statusBarStyle = .lightContent
         
         if self.refreshControl == nil {
             self.refreshControl = UIRefreshControl()
             self.refreshControl?.attributedTitle = NSAttributedString(string: "Pull to refresh")
             self.refreshControl?.addTarget(self, action: #selector(MasterViewController.refresh), for: .valueChanged)
         }
-        
-
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -58,7 +59,13 @@ class MasterViewController: UITableViewController {
     }
     
     func refresh() {
-        loadRepos()
+        self.refreshControl?.beginRefreshing()
+        dataSource?.loadMyRepos { [unowned self] _ in
+            if self.refreshControl != nil && (self.refreshControl!.isRefreshing) {
+                self.refreshControl?.endRefreshing()
+            }
+            self.tableView.reloadData()
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -71,38 +78,12 @@ class MasterViewController: UITableViewController {
     // MARK: - Segues
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "showDetail" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row] as! Repo
-                let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
-                controller.repository = object
-//                controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
-//                controller.navigationItem.leftItemsSupplementBackButton = true
-            }
-        }
+        //removed
     }
 
     // MARK: - Table View
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return objects.count
-    }
-
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RepoCell
-
-        let object = objects[indexPath.row]
-        
-        cell.title.text = object.name
-        cell.subtitle.text = object.descr
-        cell.avatarView.kf.setImage(with: URL(string: object.owner.avatarURL))
-        
-        return cell
-    }
+    
 
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
@@ -110,15 +91,19 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            objects.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
-        }
+
     }
     
-
+    
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let repo = dataSource?.repos[indexPath.row] else {
+            print("#### can't find repo")
+            return
+        }
+        
+        delegate?.didSelect(repo: repo)
+    }
 
 }
 

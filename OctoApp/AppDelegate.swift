@@ -12,35 +12,23 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    var splitViewController: UISplitViewController?
+    
+    private lazy var appCoordinator: AppCoordinator = {
+        return AppCoordinator(window: self.window!)
+    }()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-//        TokenConfig().OAuthToken = nil
-        if TokenConfig().OAuthToken != nil {
-            presentMain(config: TokenConfig())
-        } else {
-            presentLoginVC()
-        }
         let barColor = UIColor(netHex: 0x1B0040)
         let textColor = UIColor(netHex: 0xEAD9FF)
         setNavBarAppearance(primary: barColor, secondary: textColor)
         setTabBarAppearance(color: barColor)
+        
+        window = UIWindow(frame: UIScreen.main.bounds)
+        appCoordinator.start()
+        
         return true
     }
-    
-    func presentMain(config: TokenConfig?) {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let tabVC = storyboard.instantiateViewController(withIdentifier: "TabBarVC") as! UITabBarController
-        
-        window!.rootViewController = tabVC
-    }
-    
-    func presentLoginVC() {
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        let loginVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-        window?.rootViewController = loginVC
-    }
+
     
     func setNavBarAppearance(primary: UIColor, secondary: UIColor) {
         let navigationBarAppearance = UINavigationBar.appearance()
@@ -51,6 +39,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         navigationBarAppearance.titleTextAttributes = [NSForegroundColorAttributeName: secondary]
     }
     
+    
+    
     func setTabBarAppearance(color: UIColor) {
         let tabBarAppearance = UITabBar.appearance()
         tabBarAppearance.tintColor = color
@@ -59,9 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     
     func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
-        OAuthConfig().authenticate(url: url) { tokenConfig in
-            self.presentMain(config: tokenConfig)
-        }
+        appCoordinator.returnFromSafari(with: url)
         return true
     }
 

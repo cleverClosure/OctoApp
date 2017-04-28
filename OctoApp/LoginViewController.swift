@@ -7,11 +7,17 @@
 //
 
 import UIKit
-import SafariServices
 
 
 
-class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
+protocol LoginViewControllerDelegate {
+    func didTapSignIn()
+}
+
+
+class LoginViewController: UIViewController {
+    
+    var delegate: LoginViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,19 +25,12 @@ class LoginViewController: UIViewController, SFSafariViewControllerDelegate {
     }
 
     @IBAction func didTapSignIn(_ sender: Any) {
-        let url = URL(string: OAuthConfig().authPath!)!
         
-        let safariVC = SFSafariViewController(url: url)
-        safariVC.delegate = self
-        self.dismiss(animated: false, completion: nil)
-        self.present(safariVC, animated: true, completion: nil)
+        delegate?.didTapSignIn()
+        
     }
     
-    func safariViewController(_ controller: SFSafariViewController, didCompleteInitialLoad didLoadSuccessfully: Bool) {
-        if !didLoadSuccessfully {
-            controller.dismiss(animated: false, completion: nil)
-        }
-    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

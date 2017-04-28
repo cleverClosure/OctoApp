@@ -24,12 +24,10 @@ class DetailViewController: UIViewController {
         if let repository = repository {
             avatarView.kf.setImage(with: URL(string:repository.owner.avatarURL))
             if let forksCount = repository.forksCount {
-                
                 forksCountLabel.text = "\(forksCount)"
             }
             
             if let watchersCount = repository.watchersCount {
-                
                 watchersCountLabel.text = "\(watchersCount)"
             }
         }

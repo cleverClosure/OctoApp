@@ -24,6 +24,7 @@ class TokenConfig {
                 }
             }
             else { // they set it to nil, so delete it
+                print("#### niled")
                 let _ = try? Locksmith.deleteDataForUserAccount(userAccount: "github")
             }
         }
