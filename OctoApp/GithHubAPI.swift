@@ -24,6 +24,11 @@ class GitHubAPI {
         fetchRepos(repoRouter: .getMyOwn(), completionHandler: completionHandler)
     }
     
+    
+    /**
+     Fetches repositories
+     :param: RepoRouter, completionHandler
+     */
     func fetchRepos(repoRouter: RepoRouter,  completionHandler: @escaping ([Repo]?) -> Void) {
         Alamofire.request(repoRouter).responseCollection { (response: DataResponse<[Repo]>) in
             if let repos = response.value {
@@ -46,7 +51,6 @@ class GitHubAPI {
 }
 
 extension GitHubAPI {
-    
     func fetchMyself(completionHandler: @escaping (User?) -> Void) {
         Alamofire.request(RepoRouter.getMyself()).responseObject { (response: DataResponse<User>) in
             if let me = response.value {

@@ -18,7 +18,6 @@ enum RepoRouter: URLRequestConvertible {
     case getDetails(Repo)
     case getMyself()
     
-    
     func asURLRequest() throws -> URLRequest {
         var method: HTTPMethod {
             switch self {
@@ -51,7 +50,6 @@ enum RepoRouter: URLRequestConvertible {
                 return nil
             }
         }()
-        
         
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue

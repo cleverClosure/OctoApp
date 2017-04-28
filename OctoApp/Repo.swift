@@ -26,7 +26,6 @@ final class Repo: CustomStringConvertible, ResponseObjectSerializable, ResponseC
         self.owner = owner
         self.forksCount = forksCount
         self.watchersCount = watchersCount
-
     }
     
     convenience required init?(json: [String: Any]) {
@@ -47,7 +46,6 @@ final class Repo: CustomStringConvertible, ResponseObjectSerializable, ResponseC
             let name = representation["name"] as? String, let descr = representation["description"] as? String, let ownerRep = representation["owner"]
             else {
                 return nil
-                
         }
         
         let owner = User(response: response, representation: ownerRep)

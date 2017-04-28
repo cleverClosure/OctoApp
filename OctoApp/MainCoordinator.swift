@@ -21,14 +21,11 @@ class MainCoordinator: Coordinator, TabCoordinator {
         self.tabBarController = tabBarController
     }
     
+    // Setting tabs in UITabBarController
     func start(config: TokenConfig) {
-        // Setting tabs
         
         let navigationController = UINavigationController(nibName: nil, bundle: nil)
-        
         let masterVC = instantiateMasterVC(navigationController: navigationController, config: config)
-        
-//        navigationController.viewControllers = [ masterVC ]
         navigationController.pushViewController(masterVC, animated: false)
         navigationController.tabBarItem = UITabBarItem(title: "My repos", image: UIImage(named: "folder"), tag: 0)
         
@@ -38,7 +35,6 @@ class MainCoordinator: Coordinator, TabCoordinator {
         tabBarController.viewControllers = [ navigationController, profileVC ]
     
     }
-    
     
     func instantiateMasterVC(navigationController: UINavigationController, config: TokenConfig) -> MasterViewController {
         let masterVC = storyboard.instantiateViewController(withIdentifier: "MasterRepo") as! MasterViewController
@@ -52,7 +48,4 @@ class MainCoordinator: Coordinator, TabCoordinator {
         let profileVC = storyboard.instantiateViewController(withIdentifier: "profileVC") as! ProfileViewController
         return profileVC
     }
-    
-    
-    
 }

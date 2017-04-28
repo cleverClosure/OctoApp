@@ -21,22 +21,14 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     @IBAction func didTapSignIn(_ sender: Any) {
-        
         delegate?.didTapSignIn()
-        
     }
-    
 
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-
 }

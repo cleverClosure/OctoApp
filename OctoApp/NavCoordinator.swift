@@ -14,8 +14,3 @@ protocol NavCoordinator {
     
     init(navigationController: UINavigationController)
 }
-
-extension NavCoordinator {
-    
-
-}

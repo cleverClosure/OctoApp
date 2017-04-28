@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 extension Repo {
-    
     private class func repoFromResponse(response: DataResponse<Any>) -> Result<Repo> {
         guard response.result.error == nil else {
             print(response.result.error!)

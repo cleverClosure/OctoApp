@@ -17,14 +17,12 @@ class TokenConfig {
         set {
             if let valueToSave = newValue {
                 do {
-                    print("YYYYYYY")
                     try Locksmith.updateData(data: ["token": valueToSave], forUserAccount: "github")
                 } catch {
                     let _ = try? Locksmith.deleteDataForUserAccount(userAccount: "github")
                 }
             }
-            else { // they set it to nil, so delete it
-                print("#### niled")
+            else {
                 let _ = try? Locksmith.deleteDataForUserAccount(userAccount: "github")
             }
         }
@@ -43,9 +41,5 @@ class TokenConfig {
         OAuthToken = token
     }
     
-    init() {
-        
-    }
-
-
+    init() {}
 }

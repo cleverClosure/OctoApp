@@ -63,5 +63,4 @@ final class User: CustomStringConvertible, ResponseObjectSerializable, ResponseC
         
         self.init(login: login, avatarURL: avatarURL, name: name, company: company, bio: bio, followers: followers, following: following)
     }
-    
 }

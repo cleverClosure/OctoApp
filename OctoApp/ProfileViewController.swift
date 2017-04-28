@@ -26,21 +26,17 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         activityIndicatorView!.startAnimating()
-        
         GitHubAPI().fetchMyself { user in
             self.configureView(user: user!)
         }
-    }
-    override func viewDidAppear(_ animated: Bool) {
-        
     }
     
     func configureView(user: User) {
         avatarView.kf.setImage(with: URL(string: user.avatarURL), placeholder: nil, options: nil, progressBlock: nil) { (image, error, cacheType, url) in
             self.activityIndicatorView.stopAnimating()
         }
+        
         login.text = "@\(user.login)"
         name.text = user.name ?? ""
         company.text = user.company ?? ""

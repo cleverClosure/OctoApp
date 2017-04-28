@@ -17,10 +17,10 @@ class DetailViewController: UIViewController {
     
     var repository: Repo?
     
-
+    /**
+     Updates the user interface for the detail item.
+     */
     func configureView() {
-        // Update the user interface for the detail item.
-        
         if let repository = repository {
             avatarView.kf.setImage(with: URL(string:repository.owner.avatarURL))
             if let forksCount = repository.forksCount {
@@ -31,10 +31,7 @@ class DetailViewController: UIViewController {
                 watchersCountLabel.text = "\(watchersCount)"
             }
         }
-        
     }
-    
-    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,22 +40,11 @@ class DetailViewController: UIViewController {
             self.repository = fullRepo
             self.configureView()
         }
-        
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
-    }
-
-
 }
 

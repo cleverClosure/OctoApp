@@ -17,14 +17,13 @@ extension ResponseCollectionSerializable where Self: ResponseObjectSerializable 
         var collection: [Self] = []
         
         if let representation = representation as? [[String: Any]] {
-            
             for itemRepresentation in representation {
-                
                 if let item = Self(response: response, representation: itemRepresentation) {
                     collection.append(item)
                 }
             }
         }
+        
         return collection
     }
 }

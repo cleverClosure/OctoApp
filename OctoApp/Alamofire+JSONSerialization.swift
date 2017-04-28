@@ -64,7 +64,6 @@ extension DataRequest {
             return .success(T.collection(from: response, withRepresentation: jsonObject))
         }
         
-        
         return response(responseSerializer: responseSerializer, completionHandler: completionHandler)
     }
 }

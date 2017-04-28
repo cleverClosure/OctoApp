@@ -14,20 +14,14 @@ class ListCoordinator: Coordinator, NavCoordinator, MainCoordinatorDelegate, Mas
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        //        super.init()
     }
     
-    func start() {
-        let masterVC = navigationController.viewControllers.first
-    }
+    func start() {}
     
     func didSelect(repo: Repo) {
         let detailVC = storyboard.instantiateViewController(withIdentifier: "DetailRepo") as! DetailViewController
-        
         detailVC.repository = repo
-        
         navigationController.pushViewController(detailVC, animated: true)
-        
     }
 }
 

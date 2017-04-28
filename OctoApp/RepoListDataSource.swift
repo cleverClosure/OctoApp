@@ -14,7 +14,6 @@ class RepoListDataSource: NSObject, UITableViewDataSource {
     
     public var gitApi: GitHubAPI? = nil
     
-    
     init(gitApi: GitHubAPI) {
         self.gitApi = gitApi
     }
@@ -33,7 +32,6 @@ class RepoListDataSource: NSObject, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("#### repos.count \(repos.count)")
         return repos.count
     }
     
@@ -48,5 +46,4 @@ class RepoListDataSource: NSObject, UITableViewDataSource {
         
         return cell
     }
-    
 }

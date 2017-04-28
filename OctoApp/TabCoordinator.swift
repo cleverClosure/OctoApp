@@ -14,7 +14,3 @@ protocol TabCoordinator {
     
     init(tabBarController: UITabBarController)
 }
-
-extension TabCoordinator {
-    
-}

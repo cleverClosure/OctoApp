@@ -9,6 +9,7 @@
 import UIKit
 
 class AppCoordinator {
+    
     let window: UIWindow
     var rootViewController: UIViewController
     let childCoordinators: NSMutableArray
@@ -24,7 +25,7 @@ class AppCoordinator {
     }
     
     func start() {
-//        TokenConfig().OAuthToken = nil
+        // TokenConfig().OAuthToken = nil
         if TokenConfig().OAuthToken != nil {
             startMain(config: TokenConfig())
         } else {
@@ -33,11 +34,8 @@ class AppCoordinator {
     }
     
     func startLogin() {
-        
         let loginCoordinator = LoginCoordinator(navigationController: self.rootViewController as! UINavigationController)
-        
         self.childCoordinators.add(loginCoordinator)
-        
         loginCoordinator.start()
     }
     
@@ -49,10 +47,9 @@ class AppCoordinator {
         mainCoordinator.start(config: config)
     }
     
+    // after logging in to Github
     func returnFromSafari(with url: URL) {
         OAuthConfig().authenticate(url: url) { tokenConfig in
-            
-            // self.presentMain(config: tokenConfig)
             self.startMain(config: tokenConfig!)
         }
     }
