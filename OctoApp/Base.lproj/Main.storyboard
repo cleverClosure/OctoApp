@@ -106,7 +106,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="PQd-40-k3n">
-                                <rect key="frame" x="16" y="204" width="150" height="99.5"/>
+                                <rect key="frame" x="16" y="208" width="72.5" height="101"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZg-OL-Xib">
                                         <rect key="frame" x="0.0" y="0.0" width="72.5" height="33.5"/>
@@ -115,28 +115,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9uN-uG-XRU">
-                                        <rect key="frame" x="0.0" y="33.5" width="48" height="26"/>
+                                        <rect key="frame" x="0.0" y="33.5" width="48" height="26.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="company" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CrT-59-IX6">
-                                        <rect key="frame" x="0.0" y="59.5" width="70.5" height="20"/>
+                                        <rect key="frame" x="0.0" y="60" width="70.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bio" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2ha-gM-yHa">
-                                        <rect key="frame" x="0.0" y="79.5" width="23.5" height="20"/>
+                                        <rect key="frame" x="0.0" y="80.5" width="23.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="CrT-59-IX6" secondAttribute="bottom" constant="20" symbolic="YES" id="8xT-L6-vj5"/>
-                                    <constraint firstItem="2ha-gM-yHa" firstAttribute="top" secondItem="9uN-uG-XRU" secondAttribute="bottom" constant="20" id="AYh-Cm-PJk"/>
-                                    <constraint firstItem="CrT-59-IX6" firstAttribute="top" secondItem="gZg-OL-Xib" secondAttribute="bottom" constant="26" id="vDz-tF-YSF"/>
-                                </constraints>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gitlogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="FoE-dU-R8B">
                                 <rect key="frame" x="16" y="40" width="150" height="150"/>
@@ -184,21 +179,37 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ScR-bf-UPZ" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                                <rect key="frame" x="169.5" y="315.5" width="36" height="36"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="36" id="JgS-qg-NVg"/>
+                                    <constraint firstAttribute="height" constant="36" id="cAm-rI-E1R"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="typeName" value="ballPulse"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="h5Z-Bi-0T1" firstAttribute="top" secondItem="6Ea-4A-t69" secondAttribute="bottom" constant="20" id="08n-0y-ghX"/>
                             <constraint firstItem="h5Z-Bi-0T1" firstAttribute="leading" secondItem="FoE-dU-R8B" secondAttribute="trailing" constant="8" id="2AM-Za-J1T"/>
+                            <constraint firstItem="ScR-bf-UPZ" firstAttribute="centerX" secondItem="iFb-WZ-GBC" secondAttribute="centerX" id="5zX-ru-72C"/>
                             <constraint firstAttribute="leadingMargin" secondItem="FoE-dU-R8B" secondAttribute="leading" id="NUg-qD-1ka"/>
-                            <constraint firstItem="PQd-40-k3n" firstAttribute="width" secondItem="FoE-dU-R8B" secondAttribute="width" id="NtT-tb-SOF"/>
                             <constraint firstAttribute="leadingMargin" secondItem="PQd-40-k3n" secondAttribute="leading" id="QmR-pV-jjD"/>
                             <constraint firstItem="FoE-dU-R8B" firstAttribute="top" secondItem="6Ea-4A-t69" secondAttribute="bottom" constant="20" id="ZYT-3H-rd0"/>
-                            <constraint firstItem="PQd-40-k3n" firstAttribute="top" secondItem="FoE-dU-R8B" secondAttribute="bottom" constant="14" id="csm-x1-dkr"/>
+                            <constraint firstItem="PQd-40-k3n" firstAttribute="top" secondItem="FoE-dU-R8B" secondAttribute="bottom" constant="18" id="csm-x1-dkr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="h5Z-Bi-0T1" secondAttribute="trailing" id="ezY-jf-9NW"/>
+                            <constraint firstItem="ScR-bf-UPZ" firstAttribute="centerY" secondItem="iFb-WZ-GBC" secondAttribute="centerY" id="xbV-j9-Gal"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" image="profile.png" id="KLE-Gm-OCZ"/>
                     <connections>
+                        <outlet property="activityIndicatorView" destination="ScR-bf-UPZ" id="peC-jh-gwD"/>
                         <outlet property="avatarView" destination="FoE-dU-R8B" id="BdJ-wn-AnV"/>
                         <outlet property="bio" destination="2ha-gM-yHa" id="9U1-oW-qhy"/>
                         <outlet property="company" destination="CrT-59-IX6" id="l1H-CC-wmQ"/>

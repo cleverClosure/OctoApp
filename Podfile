@@ -9,6 +9,8 @@ target 'OctoApp' do
   pod 'Alamofire', '~> 4.4'
   pod 'Locksmith'
   pod 'Kingfisher', '~> 3.0'
+  pod 'NVActivityIndicatorView'
+
   target 'OctoAppTests' do
     inherit! :search_paths
     # Pods for testing
